@@ -105,6 +105,8 @@ The identifier is designed to be stable and suitable for inclusion in digital cr
 
 A Workload Identifier MUST be an absolute URI, as defined in {{Section 4.3 of URI}}. In addition the URI MUST include a non-empty authority component that identifies the trust domain within which the identifier is scoped.
 
+A Workload Identifier MUST contain a non-empty path component.
+
 The scheme and scheme-specific syntax are not defined by this specification. The URI format allows different schemes (e.g., `spiffe` as defined in {{SPIFFE-ID}}, `wimse` defined in {{wimse-scheme}}) depending on deployment requirements.  Example identifiers:
 
 ~~~
@@ -193,6 +195,8 @@ Workload Identifiers are intended to be stable over time. An identifier assigned
 ## Workload Identifier Origin
 
 A Workload Identifier Origin is a specification of a namespace under which a Workload Identifier is meaningful for a given use case. An origin consists of the URI scheme and trust domain components of a Workload Identifier, omitting the path component.
+
+A Workload Identifier Origin has no path component and is therefore not itself a valid Workload Identifier.
 
 Workload Identifier Origins serve as hints about the set of identifiers an entity may present in a particular protocol instance or usage context without revealing specific identifier.
 

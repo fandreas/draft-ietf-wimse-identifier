@@ -247,6 +247,8 @@ Validation requirements for credentials carrying Workload Identifiers are define
 
 Consumers MUST validate that the trust domain in the Workload Identifier matches an expected or explicitly trusted domain. Failure to do so may allow identifiers from unauthorized domains to be accepted as legitimate.
 
+Using an FQDN as a trust domain does not itself prove domain ownership or authority to issue credentials for that domain. Consumers MUST validate credentials using trust anchors associated with authorized issuers for that trust domain, as described in {{Section 3 of WIMSE-CREDENTIALS}}.
+
 Where appropriate, consumers should maintain an allowlist of trusted domains or trusted issuing authorities.
 
 ## Identifier Reuse and Collision

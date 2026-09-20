@@ -105,7 +105,7 @@ The identifier is designed to be stable and suitable for inclusion in digital cr
 
 A Workload Identifier MUST be an absolute URI, as defined in {{Section 4.3 of URI}}. In addition the URI MUST include a non-empty authority component that identifies the trust domain within which the identifier is scoped.
 
-The scheme and scheme-specific syntax are not defined by this specification. The URI format allows different schemes (e.g., `spiffe` as defined in {{SPIFFE-ID}}, `wimse` defined in {{wimse-scheme}}) depending on deployment requirements.  Example identifiers:
+The URI format allows different schemes (e.g., `spiffe` as defined in {{SPIFFE-ID}}, `wimse` defined in {{wimse-scheme}}) depending on deployment requirements.  Example identifiers:
 
 ~~~
 spiffe://incubation.example.org/ns/experimental/analytics/ingest
@@ -120,7 +120,7 @@ Individual Workload Identifier schemes MAY define additional syntax or processin
 
 ## Scheme Specific Portion
 
-This specification does not define additional structure or semantics for the Workload Identifier beyond the generic URI syntax and the trust domain carried in the authority component. Trust domains are opaque strings formatted according to {{Section 3.2.2 of URI}}. A particular scheme may define additional semantics and constraints for the trust domain. The same trust domain may have different meaning within different schemes.
+This specification defines common requirements for Workload Identifiers and the `wimse` URI scheme ({{wimse-scheme}}). Trust domains are opaque strings formatted according to {{Section 3.2.2 of URI}}. A particular scheme may define additional semantics and constraints for the trust domain. The same trust domain may have different meaning within different schemes.
 The structure of path component can be constrained by the scheme. Its contents are deployment-specific and are interpreted according to the scheme, policy of the trust domain, as implemented by the issuer or issuers authorized for that trust domain.
 The issuer defines the granularity at which identities are assigned.
 

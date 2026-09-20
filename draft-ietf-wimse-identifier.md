@@ -81,7 +81,7 @@ Workload:
 
 Workload Identifier:
 
-: A URI-based identifier assigned to a workload. A Workload Identifier MAY refer to a logical workload consisting of multiple instances, or to a specific workload instance, depending on the policy of the trust domain. The identifier is intended to be included in Workload Identity Credentials and interpreted as a complete URI according to the applicable URI scheme and policy of the trust domain.
+: A URI-based identifier assigned to a workload. A Workload Identifier MAY refer to a logical workload consisting of multiple instances, or to a specific workload instance, depending on the policy of the trust domain. The identifier is intended to be included in Workload Identity Credentials ({{Section 1 of !WIMSE-CREDENTIALS=I-D.ietf-wimse-workload-creds}}) and interpreted as a complete URI according to the applicable URI scheme and policy of the trust domain.
 
 Trust Domain:
 
@@ -215,7 +215,7 @@ This mapping is outside the scope of this specification and MAY be provided by c
 
 Consumers MUST NOT assume that the Workload Identifier can be derived from network-layer information such as IP address, DNS name, or request path without such mapping.
 
-Deployments using Workload Identifiers with the WIMSE credential formats defined in {{!WIMSE-CREDENTIALS=I-D.ietf-wimse-workload-creds}} MUST ensure that a consistent mapping exists between workload access handles and the Workload Identifiers contained in credentials.
+Deployments using Workload Identifiers with the WIMSE credential formats defined in {{WIMSE-CREDENTIALS}} MUST ensure that a consistent mapping exists between workload access handles and the Workload Identifiers contained in credentials.
 
 # Usage in Credentials and Tokens
 

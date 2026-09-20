@@ -150,10 +150,10 @@ spiffe://prod.trust.domain/ns/prod-01/sa/foo-service
 spiffe://prod.trust.domain/ns/prod-01/sa/foo-service/iid-1f814646-87b5-4e26-bb55-1d13caccdd8d
 ~~~
 
-* Specific code for an application role
+* Opaque identifier of a specific workload instance within an application role
 
 ~~~
-spiffe://prod.trust.domain/foo-service/sha256/c4dbb1a06030e142cb0ed4be61421967618289a19c0c7760bdd745ac67779ca7
+spiffe://prod.trust.domain/foo-service/instance/89a6ec51-f877-44c0-9501-b213597f2d1d
 ~~~
 
 Other concepts may be represented in the Workload Identifier depending on what is important in the system and what information is available when the identity is issued. The path component is interpreted according to the policy of the trust domain, subject to any syntax or semantic constraints defined by the URI scheme.

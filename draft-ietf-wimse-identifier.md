@@ -213,9 +213,11 @@ To enable correct authentication decisions, implementations MUST support a deplo
 
 This mapping is outside the scope of this specification and MAY be provided by configuration, service discovery systems, orchestration platforms, or other local policy mechanisms.
 
+The mapping MAY also be conveyed within a Workload Identity Credential, where supported by the credential format and deployment policy. For example, a Workload Identity Certificate can contain both a DNS name and a Workload Identifier in its SubjectAltName extension ({{Section 6.1 of !WIMSE-CREDENTIALS=I-D.ietf-wimse-workload-creds}}). Consumers relying on such a mapping MUST validate the credential and trust its issuer to assert the binding between the external handle and the Workload Identifier.
+
 Consumers MUST NOT assume that the Workload Identifier can be derived from network-layer information such as IP address, DNS name, or request path without such mapping.
 
-Deployments using Workload Identifiers with the WIMSE credential formats defined in {{!WIMSE-CREDENTIALS=I-D.ietf-wimse-workload-creds}} MUST ensure that a consistent mapping exists between workload access handles and the Workload Identifiers contained in credentials.
+Deployments using Workload Identifiers with the WIMSE credential formats defined in {{WIMSE-CREDENTIALS}} MUST ensure that a consistent mapping exists between workload access handles and the Workload Identifiers contained in credentials.
 
 # Usage in Credentials and Tokens
 

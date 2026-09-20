@@ -81,7 +81,7 @@ Workload:
 
 Workload Identifier:
 
-: A URI-based identifier assigned to a workload. A Workload Identifier MAY refer to a logical workload consisting of multiple instances, or to a specific workload instance, depending on the policy of the trust domain. The identifier is intended to be included in Workload Identity Credentials and interpreted as a complete URI according to the applicable URI scheme and policy of the trust domain.
+: A URI-based identifier assigned to a workload. A Workload Identifier can refer to a logical workload consisting of multiple instances, or to a specific workload instance, depending on the policy of the trust domain. The identifier is intended to be included in Workload Identity Credentials and interpreted as a complete URI according to the applicable URI scheme and policy of the trust domain.
 
 Trust Domain:
 

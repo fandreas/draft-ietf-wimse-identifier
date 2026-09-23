@@ -166,7 +166,7 @@ The authority component of the URI defines the trust domain which is responsible
 
 Workload Identifiers are interpreted as URIs, including the trust domain carried in the authority component. The identifier denotes the workload identity at the granularity assigned by the issuing trust domain, which may correspond to a service, workload class, deployment, individual workload instance, or another deployment-defined concept. Consumers MUST compare and authorize Workload Identifiers using the complete URI, rather than relying only on individual components such as the path.
 
-Issuers within a trust domain MUST ensure uniqueness of all Workload Identifiers they assign.
+Each trust domain MUST coordinate Workload Identifier assignment across all of its issuers to ensure that different workloads are assigned distinct Workload Identifiers.
 
 ## The "wimse" URI Scheme {#wimse-scheme}
 

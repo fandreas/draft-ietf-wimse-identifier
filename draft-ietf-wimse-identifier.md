@@ -237,7 +237,7 @@ Incorrect URI parsing can result in misinterpretation of identifier components, 
 
 Implementations MUST enforce the URI requirements defined in this document, including the absence of query, fragment, user information, and port components. Failure to validate these constraints may allow identifiers to carry unintended or ambiguous semantics.
 
-Implementations MUST also take care to handle Workload Identifiers of the maximum supported length without causing excessive memory allocation, resource exhaustion, or denial-of-service conditions. Parsers SHOULD impose reasonable internal limits and reject identifiers that exceed implementation-defined constraints, consistent with the length requirements in this document.
+Implementations MUST also take care to handle Workload Identifiers of the maximum supported length without causing excessive memory allocation, resource exhaustion, or denial-of-service conditions. Implementations MUST NOT reject an otherwise valid Workload Identifier on the basis of length if its total length is at most 2048 bytes. Implementations MAY reject Workload Identifiers longer than 2048 bytes according to implementation-defined limits.
 
 ## Identifier Authenticity
 
